@@ -1,0 +1,599 @@
+/* =========================================
+   REAL TIME CHAT - SIDEBAR
+   Light Green + White Theme
+========================================= */
+
+.sidebar {
+  width: 320px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  flex-shrink: 0;
+
+  background: #ffffff;
+
+  border-right: 1px solid #dcebe3;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.sidebar-header {
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;
+
+  background: #dff5e8;
+
+  border-bottom: 1px solid #cce8d8;
+
+  box-sizing: border-box;
+}
+
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+
+.brand-icon {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #35a96b;
+
+  color: white;
+
+  font-size: 21px;
+
+  box-shadow: 0 4px 10px rgba(53, 169, 107, 0.2);
+}
+
+
+.brand-text h1 {
+  margin: 0;
+
+  color: #214a35;
+
+  font-size: 17px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.4px;
+}
+
+
+.brand-text span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #5d9275;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   LOGOUT BUTTON
+========================================= */
+
+.logout-button {
+  width: 38px;
+  height: 38px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  color: #317b55;
+
+  font-size: 21px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+
+.logout-button:hover {
+  background: white;
+
+  color: #1f8a55;
+
+  transform: scale(1.05);
+}
+
+
+/* =========================================
+   CURRENT USER
+========================================= */
+
+.current-user {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 18px 20px;
+
+  border-bottom: 1px solid #edf3ef;
+
+  background: #ffffff;
+}
+
+
+.current-user-details {
+  min-width: 0;
+
+  flex: 1;
+}
+
+
+.current-user-details h3 {
+  margin: 0;
+
+  color: #263b30;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+.online-text {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: 5px;
+
+  color: #429566;
+
+  font-size: 11px;
+}
+
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  display: inline-block;
+
+  border-radius: 50%;
+
+  background: #35bd70;
+}
+
+
+/* =========================================
+   AVATAR
+========================================= */
+
+.avatar {
+  width: 48px;
+  height: 48px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #dff5e8;
+
+  color: #287c51;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  border: 2px solid white;
+
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.08);
+}
+
+
+.avatar-large {
+  width: 50px;
+  height: 50px;
+
+  font-size: 17px;
+}
+
+
+.online-indicator {
+  position: absolute;
+
+  width: 12px;
+  height: 12px;
+
+  right: -1px;
+  bottom: 1px;
+
+  border-radius: 50%;
+
+  background: #35bd70;
+
+  border: 2px solid white;
+}
+
+
+.contact-online {
+  position: absolute;
+
+  width: 10px;
+  height: 10px;
+
+  right: 0;
+  bottom: 0;
+
+  border-radius: 50%;
+
+  background: #35bd70;
+
+  border: 2px solid white;
+}
+
+
+/* =========================================
+   SEARCH BAR
+========================================= */
+
+.search-wrapper {
+  position: relative;
+
+  height: 42px;
+
+  margin: 17px 16px;
+}
+
+
+.search-wrapper input {
+  width: 100%;
+  height: 100%;
+
+  box-sizing: border-box;
+
+  padding: 0 38px;
+
+  outline: none;
+
+  border: 1px solid #dfebe5;
+
+  border-radius: 11px;
+
+  background: #f6faf8;
+
+  color: #263a30;
+
+  font-size: 13px;
+
+  transition: all 0.2s ease;
+}
+
+
+.search-wrapper input::placeholder {
+  color: #9aa9a1;
+}
+
+
+.search-wrapper input:focus {
+  background: #ffffff;
+
+  border-color: #81cba2;
+
+  box-shadow: 0 0 0 3px rgba(53, 169, 107, 0.08);
+}
+
+
+.search-icon {
+  position: absolute;
+
+  left: 13px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  font-size: 14px;
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+
+.clear-button {
+  position: absolute;
+
+  right: 7px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 26px;
+  height: 26px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #e4eee8;
+
+  color: #688076;
+
+  cursor: pointer;
+
+  font-size: 17px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   MESSAGES TITLE
+========================================= */
+
+.contacts-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px 10px;
+
+  color: #94a39b;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.1px;
+}
+
+
+.user-count {
+  min-width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #e2f5ea;
+
+  color: #39835b;
+
+  font-size: 10px;
+
+  letter-spacing: 0;
+}
+
+
+/* =========================================
+   USER LIST
+========================================= */
+
+.users-container {
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding: 0 9px 10px;
+
+  box-sizing: border-box;
+}
+
+
+.users-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+.users-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.users-container::-webkit-scrollbar-thumb {
+  background: #d7e5dd;
+
+  border-radius: 10px;
+}
+
+
+/* =========================================
+   USER ITEM
+========================================= */
+
+.user-item {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 12px 10px;
+
+  margin-bottom: 3px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: transparent;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+
+.user-item:hover {
+  background: #f2f9f5;
+}
+
+
+.user-item-selected {
+  background: #e2f5e9;
+
+  box-shadow: inset 3px 0 0 #35a96b;
+}
+
+
+.user-information {
+  min-width: 0;
+
+  flex: 1;
+}
+
+
+.user-name {
+  color: #263a30;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+.last-message {
+  margin-top: 5px;
+
+  color: #8b9992;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   NO USERS
+========================================= */
+
+.no-users {
+  padding: 50px 20px;
+
+  text-align: center;
+
+  color: #96a49d;
+}
+
+
+.no-users-icon {
+  margin-bottom: 10px;
+
+  font-size: 34px;
+}
+
+
+.no-users p {
+  margin: 0;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   SIDEBAR FOOTER
+========================================= */
+
+.sidebar-footer {
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 18px;
+
+  box-sizing: border-box;
+
+  border-top: 1px solid #edf3ef;
+
+  background: #ffffff;
+
+  color: #9aa8a1;
+
+  font-size: 11px;
+
+  flex-shrink: 0;
+}
+
+
+.connection-status {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+
+.version {
+  color: #b5beb9;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .sidebar {
+    width: 100%;
+  }
+
+}
